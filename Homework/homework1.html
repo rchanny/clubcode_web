@@ -90,6 +90,35 @@
             border-radius: 50%;
             object-fit: cover;
         }
+
+        .homework-button {
+            margin: 10px;
+            width: 70px;
+            height: 70px;
+            aspect-ratio: 1 / 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            border: none;
+            border-radius: 50%;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+
+        }
+
+        .homework-button:hover {
+            background-color: #0056b3;
+        }
+
+        .homework-button a {
+            text-decoration: none;
+            color: white;
+        }
     </style>
 </head>
 
@@ -99,6 +128,9 @@
 
     <div class="table-container">
         <h1>Employee Directory</h1>
+        <button style="margin: 10px;" class="homework-button"><a href="../index.html">HOME</a></button>
+
+
         <table class="custom-table">
             <thead>
                 <tr>
