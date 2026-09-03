@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account</title>
+    <!-- Modern Sans Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: #0c0f17;
+        font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+        color: #e2e8f0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 16px;
+    }
+
+    .signup-card {
+        background: #161b26;
+        border: 1px solid #232d3f;
+        box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+        border-radius: 20px;
+        width: 100%;
+        max-width: 480px;
+        padding: 36px 32px;
+    }
+
+    .form-header {
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+    .form-header h1 {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 6px;
+    }
+
+    .form-header p {
+        font-size: 0.88rem;
+        color: #8e9bb2;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-bottom: 18px;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    label {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #cbd5e1;
+        letter-spacing: 0.01em;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    select {
+        width: 100%;
+        padding: 12px 14px;
+        background-color: #0e121a;
+        border: 1px solid #283347;
+        border-radius: 10px;
+        color: #ffffff;
+        font-size: 0.92rem;
+        outline: none;
+        transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+    }
+
+    /* Custom styling for date input calendar icon */
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(0.8);
+        cursor: pointer;
+    }
+
+    input::placeholder {
+        color: #556277;
+    }
+
+    input:focus,
+    select:focus {
+        border-color: #3b82f6;
+        background-color: #121722;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    }
+
+    select option {
+        background: #161b26;
+        color: #ffffff;
+    }
+
+    .sub-hint {
+        font-size: 0.8rem;
+        color: #38bdf8;
+        cursor: pointer;
+        text-align: right;
+        margin-top: -2px;
+        text-decoration: none;
+    }
+
+    .sub-hint:hover {
+        text-decoration: underline;
+    }
+
+    .checkbox-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin: 22px 0;
+        cursor: pointer;
+    }
+
+    .checkbox-container input[type="checkbox"] {
+        accent-color: #3b82f6;
+        width: 17px;
+        height: 17px;
+        margin-top: 2px;
+        flex-shrink: 0;
+        cursor: pointer;
+    }
+
+    .checkbox-container label {
+        font-size: 0.82rem;
+        font-weight: 400;
+        color: #94a3b8;
+        line-height: 1.4;
+        cursor: pointer;
+    }
+
+    .checkbox-container a {
+        color: #38bdf8;
+        text-decoration: none;
+    }
+
+    .checkbox-container a:hover {
+        text-decoration: underline;
+    }
+
+    .btn-submit {
+        width: 100%;
+        padding: 13px;
+        border: none;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        color: #ffffff;
+        font-size: 0.98rem;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+        transition: transform 0.15s ease, background 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-submit:hover {
+        background: linear-gradient(135deg, #3b82f6, #2563eb);
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+    }
+
+    .btn-submit:active {
+        transform: translateY(0);
+    }
+
+    @media (max-width: 480px) {
+        .form-row {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<body>
+
+    <main class="signup-card">
+        <header class="form-header">
+            <h1>Create an Account</h1>
+            <p>Enter your details below to get started</p>
+        </header>
+
+        <form>
+            <!-- First and Last Name in one row -->
+            <div class="form-group">
+                <label>Full Name</label>
+                <div class="form-row">
+                    <input type="text" name="first-name" placeholder="First name" required />
+                    <input type="text" name="last-name" placeholder="Last name" required />
+                </div>
+            </div>
+
+            <!-- Username -->
+            <div class="form-group">
+                <label for="email">Desired Username</label>
+                <input id="email" type="text" name="email" placeholder="e.g. alexsmith" required />
+                <a href="#" class="sub-hint">Use existing email instead</a>
+            </div>
+
+            <!-- Passwords in a 2-column layout -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" name="password" placeholder="••••••••" required />
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input id="confirm-password" type="password" name="confirm-password" placeholder="••••••••"
+                        required />
+                </div>
+            </div>
+
+            <!-- DOB & Gender in a 2-column layout -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input id="dob" type="date" name="dob" required />
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Country -->
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" name="country" required>
+                    <option value="" disabled selected>Select your country</option>
+                    <option value="kh">Cambodia</option>
+                    <option value="usa">United States</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                </select>
+            </div>
+
+            <!-- Terms -->
+            <div class="checkbox-container">
+                <input type="checkbox" id="terms" name="terms" required />
+                <label for="terms">
+                    I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+                </label>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="btn-submit">Sign Up</button>
+        </form>
+    </main>
+
+</body>
+
+</html>

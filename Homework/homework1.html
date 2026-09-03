@@ -1,43 +1,234 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Homework Leading Page</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            /* Centers horizontally */
+            align-items: center;
+            /* Centers vertically */
+        }
+
+        /* Responsive Wrapper */
+        .table-container {
+
+            width: 100%;
+            max-width: 800px;
+            margin: 40px auto;
+            overflow-x: auto;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+
+        /* Base Table Styling */
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            background-color: #ffffff;
+            text-align: left;
+        }
+
+        /* Table Header */
+        .custom-table th {
+            background-color: #2c3e50;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 14px 18px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Table Cells */
+        .custom-table td {
+            padding: 12px 18px;
+            color: #333333;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        /* Alternating Row Colors (Zebra Striping) */
+        .custom-table tbody tr:nth-of-type(even) {
+            background-color: #f8f9fa;
+        }
+
+        /* Row Hover Effect */
+        .custom-table tbody tr:hover {
+            background-color: #eef2f7;
+            transition: background-color 0.2s ease;
+        }
+
+        /* Status Badges */
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .badge-pending {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+
+        .profile-photo {
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    </style>
 </head>
 
 <body>
-    <h1 style="color: blue; text-align: center; margin-top: 50px">
-        Welcome to my homework page!
-    </h1>
 
-    <img src="./angkorwat.png
-    " alt="Angkorwat Cambodia" style="display: block; margin: 0 auto; width: 50%; height: 400px" />
 
-    <div style="max-width: 800px; margin: 0 auto; padding: 20px">
-        <h2 style="text-align: center; margin-top: 20px">
-            Angkor Wat: Summit of the Universe
-        </h2>
 
-        <p style="text-align: center; margin: 20px">
-            Like many other people, I’m guilty of using the name Angkor Wat to refer
-            to the whole complex of ancient Khmer temples found near Siem Reap,
-            Cambodia. But Angkor Wat is a single, specific temple—the biggest and,
-            arguably, the best. It was built between 1113 and 1150, during the
-            height of the Khmer empire’s power. Its imposing size and structure are
-            a reflection of that power. “Angkor Wat” means “a city that is a pagoda
-            (temple),” and that’s exactly what it is. Angkor Wat was built to be the
-            capital city of the empire, with a state temple at its physical (and
-            symbolic) center dedicated to the Hindu god Vishnu. The city covered a
-            rectangular area more than a mile long on each side, surrounded by a
-            high stone wall and, beyond that, a moat 200 yards wide. A stone
-            causeway crossed the moat, broad and strong enough to support
-            processions of the king and his officials mounted on elephants. The moat
-            and causeways and walls remain, along with the stone gatehouses,
-            roadways, and temple.
-        </p>
+    <div class="table-container">
+        <h1>Employee Directory</h1>
+        <table class="custom-table">
+            <thead>
+                <tr>
+
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Department</th>
+                    <th>Detail</th>
+                    <th>Profile Photo</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#101</td>
+                    <td>Jane Doe</td>
+                    <td>Frontend Developer</td>
+                    <td>Engineering</td>
+                    <td><span class="badge badge-success"> <a href="/Profiledetails/jane.html"> Click here</a> </span>
+                    </td>
+                    <td><img class="profile-photo" src="/Lesson/Assets/Profilephoto/profile1.png" alt="Jane Doe"
+                            width="50"></td>
+                </tr>
+                <tr>
+                    <td>#102</td>
+                    <td>SmithAle</td>
+                    <td>UX Designer</td>
+                    <td>Design</td>
+                    <td><span class="badge badge-success"> <a href="/Profiledetails/SmithAle.html"> Click here</a>
+                        </span></td>
+                    <td><img class="profile-photo" src="/Lesson/Assets/Profilephoto/profile2.png" alt="SmithAle"
+                            width="50"></td>
+                </tr>
+                <tr>
+                    <td>#103</td>
+                    <td>Michael Brown</td>
+                    <td>Product Manager</td>
+                    <td>Operations</td>
+                    <td><span class="badge badge-success"> <a href="/Profiledetails/Michael.html"> Click here</a>
+                        </span></td>
+                    <td><img class="profile-photo" src="/Lesson/Assets/Profilephoto/profile3.png" alt="Michael Brown"
+                            width="50"></td>
+                </tr>
+                <tr>
+                    <td>#101</td>
+                    <td>Jane Doe</td>
+                    <td>Frontend Developer</td>
+                    <td>Engineering</td>
+                    <td><span class="badge badge-success"> <a href="/Profiledetails/jane.html"> Click here</a> </span>
+                    </td>
+                    <td><img class="profile-photo" src="/Lesson/Assets/Profilephoto/profile1.png" alt="Jane Doe"
+                            width="50"></td>
+                </tr>
+                <tr>
+                    <td>#102</td>
+                    <td>SmithAle</td>
+                    <td>UX Designer</td>
+                    <td>Design</td>
+                    <td><span class="badge badge-success"> <a href="./SmithAle.html"> Click here</a> </span></td>
+                    <td><img class="profile-photo" src="/Lesson/Assets/Profilephoto/profile2.png" alt="SmithAle"
+                            width="50"></td>
+                </tr>
+                <tr>
+                    <td>#103</td>
+                    <td>Michael Brown</td>
+                    <td>Product Manager</td>
+                    <td>Operations</td>
+                    <td><span class="badge badge-success"> <a href="./Michael.html"> Click here</a> </span></td>
+                    <td><img class="profile-photo" src="/Lesson/Assets/Profilephoto/profile3.png" alt="Michael Brown"
+                            width="50"></td>
+                </tr>
+                <tr>
+                    <td>#101</td>
+                    <td>Jane Doe</td>
+                    <td>Frontend Developer</td>
+                    <td>Engineering</td>
+                    <td><span class="badge badge-success"> <a href="./jane.html"> Click here</a> </span></td>
+                    <td><img class="profile-photo" src="/Lesson/Assets/Profilephoto/profile1.png" alt="Jane Doe"
+                            width="50"></td>
+                </tr>
+                <tr>
+                    <td>#102</td>
+                    <td>SmithAle</td>
+                    <td>UX Designer</td>
+                    <td>Design</td>
+                    <td><span class="badge badge-success"> <a href="./SmithAle.html"> Click here</a> </span></td>
+                    <td><img class="profile-photo" src="/Lesson/Assets/Profilephoto/profile2.png" alt="SmithAle"
+                            width="50"></td>
+                </tr>
+                <tr>
+                    <td>#103</td>
+                    <td>Michael Brown</td>
+                    <td>Product Manager</td>
+                    <td>Operations</td>
+                    <td><span class="badge badge-success"> <a href="./Michael.html"> Click here</a> </span></td>
+                    <td><img class="profile-photo" src="/Lesson/Assets/Profilephoto/profile3.png" alt="Michael Brown"
+                            width="50"></td>
+                </tr>
+                <tr>
+                    <td>#101</td>
+                    <td>Jane Doe</td>
+                    <td>Frontend Developer</td>
+                    <td>Engineering</td>
+                    <td><span class="badge badge-success"> <a href="./jane.html"> Click here</a> </span></td>
+                    <td><img class="profile-photo" src="/Lesson/Assets/Profilephoto/profile1.png" alt="Jane Doe"
+                            width="50"></td>
+                </tr>
+                <tr>
+                    <td>#102</td>
+                    <td>SmithAle</td>
+                    <td>UX Designer</td>
+                    <td>Design</td>
+                    <td><span class="badge badge-success"> <a href="./SmithAle.html"> Click here</a> </span></td>
+                    <td><img class="profile-photo" src="/Lesson/Assets/Profilephoto/profile2.png" alt="SmithAle"
+                            width="50"></td>
+                </tr>
+                <tr>
+                    <td>#103</td>
+                    <td>Michael Brown</td>
+                    <td>Product Manager</td>
+                    <td>Operations</td>
+                    <td><span class="badge badge-success"> <a href="./Michael.html"> Click here</a> </span></td>
+                    <td><img class="profile-photo" src="/Lesson/Assets/Profilephoto/profile3.png" alt="Michael Brown"
+                            width="50"></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+
 </body>
 
 </html>
