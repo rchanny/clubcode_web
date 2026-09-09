@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mondrian Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #121212;
+            color: #fff;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+
+        }
+
+
+        .main-box {
+            width: 500px;
+            height: 500px;
+            background-color: #dcd9cf;
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            border-radius: 20px;
+        }
+
+
+        .top-section {
+            flex: 2.3;
+            display: flex;
+            gap: 14px;
+            border-radius: 20px;
+        }
+
+        .box-sky-blue {
+            flex: 1;
+            background-color: #2a75bb;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .box-sky-blue:hover {
+            background-color: #01111f;
+            cursor: pointer;
+        }
+
+        .top-right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .box-yellow {
+            flex: 1.5;
+            background-color: #bebe16;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box-yellow:hover {
+            background-color: #7a7a0f;
+            cursor: pointer;
+        }
+
+        .box-black {
+            flex: 1;
+            background-color: #000000;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box-black:hover {
+            background-color: #8f0d0d;
+            cursor: pointer;
+        }
+
+        /* Bottom Section */
+        .bottom-section {
+            flex: 1;
+            display: flex;
+            gap: 14px;
+        }
+
+        .box-dark-blue {
+            flex: 0.6;
+            background-color: #4d7698;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box-dark-blue:hover {
+            background-color: #f9fd03;
+            cursor: pointer;
+        }
+
+        .box-red {
+            flex: 2;
+            background-color: #e52927;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box-red:hover {
+            background-color: #f9fd03;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-box">
+
+        <div class="top-section">
+            <div class="box-sky-blue">Box1</div>
+            <div class="top-right-column">
+                <div class="box-yellow">Box2</div>
+                <div class="box-black">Box3</div>
+            </div>
+        </div>
+
+
+        <div class="bottom-section">
+            <div class="box-dark-blue">Box4</div>
+            <div class="box-red">Box5</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
