@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box2 Homework</title>
+</head>
+<style>
+    @font-face {
+        font-family: 'MyAwesomeFont';
+        src: url('../Fonts/Drescher Grotesk BT SemiBold Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        min-height: 100vh;
+        display: flex;
+        /* Enable flexbox */
+        flex-direction: column;
+        /* Stack header, content, and footer vertically */
+        justify-content: space-between;
+        /* Pushes header to top, footer to bottom */
+        background-color: #121212;
+        color: #fff;
+        text-align: center;
+        font-family: 'MyAwesomeFont', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+
+
+    .header {
+        height: 100px;
+        width: 100%;
+        background-color: #2a75bb;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        padding: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .footer {
+        height: 50px;
+        width: 100%;
+        background-color: #2a75bb;
+        font-size: 1rem;
+        padding: 10px;
+        position: sticky;
+        bottom: 0;
+        z-index: 1000;
+    }
+
+    .container {
+        height: 700px;
+        width: 800px;
+        background-color: #dcd9cf;
+    }
+
+    .content-box1 {
+        width: 64%;
+        height: 55%;
+        background-color: #9ea512;
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+
+    .content-box2 {
+        width: 35%;
+        height: 55%;
+        background-color: #8c8448;
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 1%;
+    }
+
+    .content-box3 {
+        width: 49%;
+        height: 44%;
+        background-color: #697c8e;
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1%;
+    }
+
+    .content-box4 {
+        width: 50%;
+        height: 44%;
+        background-color: #bd5acc;
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1%;
+        margin-left: 1%;
+    }
+</style>
+
+<body>
+    <!-- header -->
+    <div class="header"></div>
+
+    <!-- main content -->
+    <div class="container">
+        <div class="content-box1">
+            <h2>Content Box 1</h2>
+        </div>
+        <div class="content-box2">
+            <h2>Content Box 2</h2>
+        </div>
+        <div class="content-box3">
+            <h2>Content Box 3</h2>
+        </div>
+        <div class="content-box4">
+            <h2>Content Box 4</h2>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </div>
+</body>
+
+</html>
