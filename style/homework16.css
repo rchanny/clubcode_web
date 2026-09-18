@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main {
+    background-color: #333;
+    /* Grid border color */
+    width: 1000px;
+    height: 500px;
+    padding: 10px;
+    /* Creates the border thickness */
+    display: grid;
+    grid-template-columns: 2fr 4fr 6fr 2fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+
+}
+
+
+.container-left {
+    background-color: #45b8ac;
+    grid-column: 1;
+    grid-row: 1 / span 3;
+}
+
+.container-right {
+    background-color: #45b8ac;
+    grid-column: 4;
+    grid-row: 2 / span 2;
+}
+
+/* 2. Top row items */
+.red-top {
+    background-color: #ea4335;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.blue-top {
+    background-color: #4285f4;
+    grid-column: 3 / span 2;
+
+    grid-row: 1;
+}
+
+
+
+
+.beige-middle {
+    background-color: #d4af37;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.white-center {
+    background-color: #ffffff;
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.red-side {
+    background-color: #ea4335;
+    grid-column: 4;
+    grid-row: 2;
+}
+
+/* 4. Bottom row items */
+.red-bottom {
+    background-color: #ea4335;
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.blue-bottom {
+    background-color: #4285f4;
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.red-right {
+    background-color: #ea4335;
+    grid-column: 4;
+    grid-row: 3;
+}
