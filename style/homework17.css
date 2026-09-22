@@ -52,11 +52,14 @@ body {
     width: 95px;
     height: 75px;
     object-fit: cover;
+    object-position: top;
+    transition: transform 0.2s ease;
 }
 
 .news-thumbnails.dual img {
     width: 140px;
     height: 95px;
+    object-position: top;
 }
 
 /* Content Section */
