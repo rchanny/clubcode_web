@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Khmer OS Siemreap', sans-serif, Arial;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpFZ1LcyaWy9DHwrmKhYoZSLy20SL198h_qQ6rTwd4-Q&s=10);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.submenu{
+    width: 150px;
+    position: absolute;
+    overflow: hidden;
+    background-color: violet;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease-in-out;
+    /* display: none; */
+}
+.navbar.nav-link ul li : hover .submenu{
+    opacity: 1;
+transform: translateY(0);
+}
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1c2d5a; /* Dark blue theme matching header */
+    width: 100%;
+}
+
+.nav-brand {
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    height: 100%;
+    list-style: none;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    padding: 15px 22px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Active tab style matching the green highlight in your image */
+.nav-links a.active {
+    background-color: #008726; 
+}
+
+/* Main Content Styles (For demonstration) */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('your-image-url.jpg') center/cover no-repeat;
+    min-height: 400px;
+}
+
+.hero-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px 40px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.hero-card h2 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.hero-card p {
+    font-size: 1.4rem;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #008726; /* Matching green theme */
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 1rem;
+    color: #ffffff;
+    width: 100%;
+}
+
+/* Hide submenu by default */
+.submenu {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+/* Show submenu on list item hover */
+.nav-links li:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
